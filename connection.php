@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
     $servername = "localhost";
     $username = "root";
@@ -12,4 +13,11 @@
     // } catch(PDOException $e) {
     //     echo $e->getMessage();
     // }
+=======
+    try {    
+        $db = new PDO('sqlite:products.sq3');
+    } catch(PDOException $e) {
+        echo $e->getMessage();
+    }
+>>>>>>> 2d9ca0430a2c225210160780eb21c7481fb519ca
 ?>

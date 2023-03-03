@@ -7,9 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     <?php include 'navbar.php';?>
     <div>A new product to add</div>
     <form name="form" action="/php-practice/add_product.php" method="POST">
+=======
+    <div>A new product to add</div>
+    <form name="form" action="" method="post">
+>>>>>>> 2d9ca0430a2c225210160780eb21c7481fb519ca
         <div>Item name</div>
         <input type="text" name="item">
 
@@ -27,6 +32,10 @@
         <button type="submit">Submit</button>
     </form>
     <?php
+<<<<<<< HEAD
+=======
+        include 'navbar.php';
+>>>>>>> 2d9ca0430a2c225210160780eb21c7481fb519ca
         include 'connection.php';
         $invalid_input = false;
         foreach ($_POST as $data)
@@ -38,6 +47,7 @@
         }
         if (!$invalid_input)
         {
+<<<<<<< HEAD
             $item = $_POST['item'];
             $url = $_POST['pictureURL'];
             $priceDollars = $_POST['price'];
@@ -46,6 +56,9 @@
             $stmt->bind_param("ssiis", $_POST['item'], $_POST['pictureURL'], $_POST['quantity'], $_POST['price'], $_POST['description']);
             $stmt->execute();
             header('Location: '. '/php-practice/');
+=======
+            $db->exec("INSERT INTO items (item, pictureURL, quantity, price, description) VALUES ('{$_POST['item']}', '{$_POST['pictureURL']}', {$_POST['quantity']}, {$_POST['price']}, '{$_POST['description']}');");
+>>>>>>> 2d9ca0430a2c225210160780eb21c7481fb519ca
         }
         
     ?>
