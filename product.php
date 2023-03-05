@@ -45,22 +45,5 @@
         {
             return $this->description;
         }
-
-
-    }
-
-    class AddProduct {
-        public $id;
-        public $item;
-        public $pictureURL;
-        public $quantity;
-        public $price;
-        public $description;
-
-        function __construct()
-        {
-               
-        }
-
     }
 ?>
