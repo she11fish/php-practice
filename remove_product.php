@@ -15,7 +15,7 @@
                 <div>
                     <div>
                         <div style="font-size: 72px;">Delete Item</div>
-                        <div style="font-size: 72px;" class="mt-1">Item Name to Delete</div>
+                        <div style="font-size: 72px;" class="mt-1">Refer to item to be deleted</div>
                     </div>
                     
                     <input type="text" class="form-control-lg mt-5 w-100" style="height: 15%;" name="item" autocomplete="off">

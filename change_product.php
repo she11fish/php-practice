@@ -10,7 +10,7 @@
 <body style="height: 100vh; background-color: #A5243D;">
     <?php include 'navbar.php';?>
     <div class="container d-flex justify-content-center" style="height: calc(100vh - 125px); margin-top: 25px;">
-        <form class="d-flex align-content-center w-50" name="form" action="/add_product.php" method="POST">
+        <form class="d-flex align-content-center w-50" name="form" action="/change_product.php" method="POST">
             <div class="d-flex flex-column justify-content-evenly">
                 <div class="row">
                     <div class="fs-1">Change Item</div>

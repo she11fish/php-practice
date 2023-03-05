@@ -9,40 +9,40 @@
 </head>
 <body style="background-color: #A5243D;">
 	<?php include 'navbar.php';?>
-	<div class="container">
-		<div class='d-flex justify-content-evenly' style="margin-top: 100px;">
-				<?php
-					include 'product.php';
-					include 'connection.php';
-					$products = $db->query('SELECT * FROM items');
-					foreach($products as $product) {
-						$p = new Product($product);
-						$price = $p->getPrice() / 100;
+	
+		<?php
+			include 'product.php';
+			include 'connection.php';
+			$products = $db->query('SELECT * FROM items');
+			foreach($products as $product) {
+				$p = new Product($product);
+				$price = $p->getPrice() / 100;
+				print '<div class="container" style="height: calc(100vh - 200px);">';
+					print "<div class='d-flex justify-content-evenly' style='margin-top: 100px;'>";
 						print "<div>";
 							print "<div style='height: 100px;'>";
-								print "<div class='text-center fs-1'>Product Name</div>"; 
-								print "<div class='text-center fs-2'>{$p->getItem()}</div>";
+								print "<div class='text-center fs-1'>{$p->getItem()}</div>";
 							print "</div>"; 
 							print "<img src={$p->getURL()} height=500px style='background: transparent no-repeat center; background-size: cover;'>";
 						print '</div>';
 						print "<div class='d-flex flex-column justify-content-start align-items-start' style='width: 500px'>";
 							print "<div>";
-								print "<div class='text-start fs-1 h-5'>How many available?</div>";
-								print "<div class='text-start fs-2 h-5'>{$p->getQuantity()}</div>"; 
+								print "<div class='text-start fs-1 h-5'>How many in stock</div>";
+								print "<div class='text-start fs-2 h-5'>{$p->getQuantity()} {$p->getItem()}s</div>"; 
 							print "</div>";
 							print "<div>";
 								print "<div class='text-start fs-1 h-5'>Price</div>";
-								print "<div class='text-start fs-2 h-5'>\${$price}</div>"; 
+								print "<div class='text-start fs-2 h-5'>\${$price} each</div>"; 
 							print "</div>";
 							print "<div>";
 								print "<div class='text-start fs-1 h-5'>Description</div>";
 								print "<div class='text-start fs-5 h-5'>{$p->getDescription()}</div>";
 							print "</div>";
 						print '</div>';
-					}
-				?>
-		</div>
-	</div>
+					print "</div>";
+				print "</div>";
+			}
+		?>
 	<?php
 		// Must be set to null when finishing the database for security purposes
 		$db = null;
