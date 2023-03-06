@@ -28,13 +28,13 @@
                         <div class="input-group-lg mb-3">
                             <input type="text" name="quantity" class="form-control-lg" aria-label="Dollar amount (with dot and two decimal places)" autocomplete="off">
                     </div>
-                    <div class="fs-1">The Price</div>
+                    <div class="fs-1">Price</div>
                     <div class="input-group-lg mb-3">
                         <input type="text" name="price" class="form-control-lg" aria-label="Dollar amount (with dot and two decimal places)" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="fs-1">Description of the product</div>
+                    <div class="fs-1">Product Description</div>
                     <input type="text" name="description" class="form-control-lg" autocomplete="off">
                 </div>
                 <div class="d-flex justify-content-center">

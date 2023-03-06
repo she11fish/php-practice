@@ -13,7 +13,7 @@
         <form class="d-flex align-content-center w-50" name="form" action="/add_product.php" method="POST">
             <div class="d-flex flex-column justify-content-evenly">
                 <div class="row">
-                    <div class="fs-1">A New Product to Add</div>
+                    <div class="fs-1">Adding Product</div>
                     <div class="fs-1">Item name</div>
                     <input type="text" class="form-control-lg" name="item" autocomplete="off">
                     
@@ -28,13 +28,13 @@
                         <div class="input-group-lg mb-3">
                             <input type="text" name="quantity" class="form-control-lg" aria-label="Dollar amount (with dot and two decimal places)" autocomplete="off">
                     </div>
-                    <div class="fs-1">The Price</div>
+                    <div class="fs-1">Price</div>
                     <div class="input-group-lg mb-3">
                         <input type="text" name="price" class="form-control-lg" aria-label="Dollar amount (with dot and two decimal places)" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="fs-1">Description of the product</div>
+                    <div class="fs-1">Product Description</div>
                     <input type="text" name="description" class="form-control-lg" autocomplete="off">
                 </div>
                 <div class="d-flex justify-content-center">
